@@ -1,19 +1,21 @@
 ﻿
-let quadruple x =    
-    let double x =
-        x * 2
+let chrisTest test =
+    test "Chris"
 
-    double(double(x))
-let value = quadruple(5)
-printfn "The answer is: %d" value
- 
+let isMe x =
+    if x = "Chris" then
+        "it is Chris!"
+    else
+        "it's someone else"
+
+let value = chrisTest isMe
+printfn "The answer is: %A" value
  
 #if COMPILED
 
 module BoilerPlateForForm =
     [<System.STAThread>]
     do ()
-//    do System.Windows.Forms.Application.Run()
 
 #endif
 
